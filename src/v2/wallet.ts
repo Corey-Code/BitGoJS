@@ -1044,6 +1044,8 @@ Wallet.prototype.removeUser = function(params, callback) {
  * @param {Boolean} params.noSplitChange - Set to true to disable automatic change splitting for purposes of unspent management
  * @param {Array} params.unspents - The unspents to use in the transaction. Each unspent should be in the form prevTxId:nOutput
  * @param {String} params.changeAddress - Specifies the destination of the change output
+ * @param {Number} params.firstRound - (Algorand) The minimum round this will run on
+ * @param {Number} params.lastRound - (Algorand) The maximum round this will run on
  * @param {Boolean} params.instant - Build this transaction to conform with instant sending coin-specific method (if available)
  * @param {{value: String, type: String}} params.memo - Memo to use in transaction (supported by Stellar)
  * @param {String} params.addressType - The type of address to create for change. One of `p2sh`, `p2shP2wsh`, and `p2wsh`. Case-sensitive.
@@ -1057,7 +1059,8 @@ Wallet.prototype.prebuildTransaction = function(params, callback) {
       'recipients', 'numBlocks', 'feeRate', 'maxFeeRate', 'minConfirms', 'enforceMinConfirmsForChange',
       'targetWalletUnspents', 'message', 'minValue', 'maxValue', 'sequenceId', 'lastLedgerSequence',
       'ledgerSequenceDelta', 'gasPrice', 'noSplitChange', 'unspents', 'changeAddress', 'instant', 'memo', 'addressType',
-      'cpfpTxIds', 'cpfpFeeRate', 'maxFee', 'idfVersion', 'idfSignedTimestamp', 'idfUserId', 'strategy'
+      'cpfpTxIds', 'cpfpFeeRate', 'maxFee', 'idfVersion', 'idfSignedTimestamp', 'idfUserId', 'strategy',
+      'firstRound', 'lastRound',
     ]);
     debug('prebuilding transaction: %O', whitelistedParams);
 

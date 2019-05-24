@@ -1,7 +1,7 @@
 import BaseCoin = require('../baseCoin');
 import * as _ from 'lodash';
 
-const algosdk = require('algosdk');
+const algosdk = require('algosdk-node6');
 
 class Algorand extends BaseCoin {
 
@@ -31,7 +31,7 @@ class Algorand extends BaseCoin {
      */
     valuelessTransferAllowed(): boolean {
         // TODO: this sounds like its true with the staking txes - confirm before launch
-        return true;
+        return false;
     }
 
     /**
@@ -60,6 +60,8 @@ class Algorand extends BaseCoin {
             throw new Error(`prv must be a string, got type ${typeof prv}`);
         }
 
+        // sign 
+    
         const keyPair = stellar.Keypair.fromSecret(prv);
         const tx = new stellar.Transaction(txPrebuild.txBase64);
         
