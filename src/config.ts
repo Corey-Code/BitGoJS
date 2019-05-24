@@ -238,6 +238,8 @@ export const tokens = {
         { type: 'plx', coin: 'eth', network: 'Mainnet', name: 'PLN Stable Token', tokenContractAddress: '0x8d682bc7ad206e54055c609ea1d4717caab665d0', decimalPlaces: 18 },
         { type: 'cqx', coin: 'eth', network: 'Mainnet', name: 'Coinquista Coin', tokenContractAddress: '0x618c29dd2d16475b2ae6244f9e8aaead68f0ca44', decimalPlaces: 18 },
         { type: 'kze', coin: 'eth', network: 'Mainnet', name: 'Almeela', tokenContractAddress: '0x8de67d55c58540807601dbf1259537bc2dffc84d', decimalPlaces: 18 },
+        { type: 'tiox', coin: 'eth', network: 'Mainnet', name: 'Trade Token X', tokenContractAddress: '0xd947b0ceab2a8885866b9a04a06ae99de852a3d4', decimalPlaces: 18 },
+        { type: 'spo', coin: 'eth', network: 'Mainnet', name: 'Sparrow Options', tokenContractAddress: '0x89eafa06d99f0a4d816918245266800c9a0941e0', decimalPlaces: 18 },
       ]
     },
     ofc: {
